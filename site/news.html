@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ข่าวสาร & ประชาสัมพันธ์ — PICO FINANCE</title>
+  <meta name="description" content="ข่าวสารและประชาสัมพันธ์ บริษัท ใหญ่เติมสุข จำกัด (พิโกไฟแนนซ์ อุตรดิตถ์)" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgZmlsbD0iIzBhMTYyOCIvPjwvc3ZnPg==" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="app-wrapper">
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/img/logo.jpg" alt="โลโก้ บริษัท ใหญ่เติมสุข จำกัด" />
+        <span class="brand-name">PICO FINANCE<small>บริษัท ใหญ่เติมสุข จำกัด</small></span>
+      </a>
+      <nav class="nav-links" aria-label="เมนูหลัก">
+        <a href="index.html#home">หน้าแรก</a>
+        <a href="index.html#calculator">คำนวณสินเชื่อ</a>
+        <a href="news.html">ข่าวสาร</a>
+        <a href="index.html#about">เกี่ยวกับเรา</a>
+      </nav>
+      <button class="nav-toggle" aria-label="เปิดเมนู" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" aria-label="เมนูมือถือ">
+      <a href="index.html#home">หน้าแรก</a>
+      <a href="index.html#calculator">คำนวณสินเชื่อ</a>
+      <a href="news.html">ข่าวสาร</a>
+      <a href="index.html#about">เกี่ยวกับเรา</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section-wrap">
+      <span class="section-label">✦ ข่าวสาร</span>
+      <div class="accent-bar"></div>
+      <h1 class="section-title">ข่าวสาร & ประชาสัมพันธ์</h1>
+      <p class="section-sub">ติดตามข่าวสารและโปรโมชันล่าสุดของเรา</p>
+
+      <!-- ข่าวจะถูก render จากตัวแปร NEWS ใน js/data.js -->
+      <div id="news-grid" class="news-grid"></div>
+    </section>
+
+    <!-- ===== ติดตามผ่าน LINE ===== -->
+    <section class="section-wrap cta">
+      <div class="card cta-card">
+        <h3>ติดตามข่าวสารเพิ่มเติม</h3>
+        <p>อัปเดตโปรโมชันและข่าวสารผ่าน LINE</p>
+        <div class="cta-actions">
+          <a class="btn-line" href="https://line.me/ti/p/NenMGpzP2S" target="_blank" rel="noopener">💬 แอดไลน์ pico.utt</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/img/logo.jpg" alt="โลโก้บริษัท" />
+        <span class="brand-name">PICO FINANCE<small>บริษัท ใหญ่เติมสุข จำกัด</small></span>
+      </a>
+      <p class="footer-desc">
+        บริษัท ใหญ่เติมสุข จำกัด ประกอบธุรกิจสินเชื่อรายย่อยระดับจังหวัดภายใต้การกำกับ (พิโกไฟแนนซ์)
+        ได้รับอนุญาตจากกระทรวงการคลัง ในจังหวัดอุตรดิตถ์
+      </p>
+      <div class="footer-block">
+        <h5>ติดต่อเรา</h5>
+        <p>📍 119 ม.6 ต.แม่พูล อ.ลับแล จ.อุตรดิตถ์</p>
+        <p>📞 <a href="tel:0645169542">064-516-9542</a></p>
+        <p>💬 LINE: <a href="https://line.me/ti/p/NenMGpzP2S" target="_blank" rel="noopener">pico.utt</a></p>
+      </div>
+      <div class="footer-block">
+        <h5>ใบอนุญาต</h5>
+        <p>เลขที่ 1169/2568 กระทรวงการคลัง</p>
+        <a class="footer-license-link" href="https://www.fpo.go.th/FPOLicense/?d=1_12053556800038253116925684" target="_blank" rel="noopener">ตรวจสอบใบอนุญาต ↗</a>
+      </div>
+      <div class="footer-bottom">© 2569 บริษัท ใหญ่เติมสุข จำกัด · สงวนลิขสิทธิ์</div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/calculator.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
