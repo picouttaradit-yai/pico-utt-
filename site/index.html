@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PICO FINANCE — บริษัท ใหญ่เติมสุข จำกัด</title>
+  <meta name="description" content="สินเชื่อพิโกไฟแนนซ์ จ.อุตรดิตถ์ สำหรับข้าราชการและพนักงานรัฐวิสาหกิจ ถูกกฎหมาย ดอกเบี้ยโปร่งใส ไม่ต้องมีคนค้ำ ใบอนุญาต 1169/2568 กระทรวงการคลัง" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgZmlsbD0iIzBhMTYyOCIvPjwvc3ZnPg==" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="app-wrapper">
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a href="#home" class="brand">
+        <img src="assets/img/logo.jpg" alt="โลโก้ บริษัท ใหญ่เติมสุข จำกัด" />
+        <span class="brand-name">PICO FINANCE<small>บริษัท ใหญ่เติมสุข จำกัด</small></span>
+      </a>
+      <nav class="nav-links" aria-label="เมนูหลัก">
+        <a href="#home">หน้าแรก</a>
+        <a href="#calculator">คำนวณสินเชื่อ</a>
+        <a href="news.html">ข่าวสาร</a>
+        <a href="#about">เกี่ยวกับเรา</a>
+      </nav>
+      <button class="nav-toggle" aria-label="เปิดเมนู" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" aria-label="เมนูมือถือ">
+      <a href="#home">หน้าแรก</a>
+      <a href="#calculator">คำนวณสินเชื่อ</a>
+      <a href="news.html">ข่าวสาร</a>
+      <a href="#about">เกี่ยวกับเรา</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section id="home" class="hero">
+      <img class="hero-logo" src="assets/img/logo.jpg" alt="โลโก้บริษัท ใหญ่เติมสุข จำกัด" />
+      <span class="hero-badge">🛡️ ใบอนุญาตเลขที่ 1169/2568 กระทรวงการคลัง</span>
+      <h1>สินเชื่อโปร่งใส เชื่อถือได้<br>ภายใต้กฎหมาย</h1>
+      <p class="lead">สำหรับข้าราชการและพนักงานรัฐวิสาหกิจ ในจังหวัดอุตรดิตถ์</p>
+      <p class="slogan">ไม่ต้องมีคนค้ำ · ส่งเอกสาร LINE · โอนเงินไวทันใจ</p>
+      <div class="hero-actions">
+        <a class="btn-line" href="https://line.me/ti/p/NenMGpzP2S" target="_blank" rel="noopener">💬 แอดไลน์ pico.utt</a>
+        <a class="btn-call" href="tel:0645169542">📞 โทร 064-516-9542</a>
+      </div>
+    </section>
+
+    <!-- ===== จุดเด่น ===== -->
+    <section class="section-wrap">
+      <span class="section-label">✦ จุดเด่น</span>
+      <div class="accent-bar"></div>
+      <h2 class="section-title">ทำไมต้องเลือกเรา</h2>
+      <p class="section-sub">สินเชื่อโปร่งใส ทุกขั้นตอน ภายใต้การกำกับของกระทรวงการคลัง</p>
+      <div id="feature-grid" class="feature-grid"></div>
+    </section>
+
+    <!-- ===== ผลิตภัณฑ์ ===== -->
+    <section class="section-wrap">
+      <span class="section-label">✦ ผลิตภัณฑ์</span>
+      <div class="accent-bar"></div>
+      <h2 class="section-title">สินเชื่อของเรา</h2>
+      <p class="section-sub">เลือกแบบที่เหมาะกับความต้องการของคุณ</p>
+      <div id="product-list" class="product-list"></div>
+    </section>
+
+    <!-- ===== Calculator ===== -->
+    <section id="calculator" class="section-wrap">
+      <span class="section-label">✦ คำนวณสินเชื่อ</span>
+      <div class="accent-bar"></div>
+      <h2 class="section-title">คำนวณยอดผ่อนของฉัน</h2>
+      <p class="section-sub">กรอกข้อมูลเพื่อดูยอดผ่อนต่อเดือน</p>
+      <div class="card calc-box">
+        <div class="calc-step-label"><span class="calc-step-num">1</span> เลือกอาชีพ</div>
+        <div id="occ-list" class="occ-list"></div>
+
+        <div class="calc-step-label"><span class="calc-step-num">2</span> วงเงินที่ต้องการ</div>
+        <div class="amount-row">
+          <span id="amount-value" class="value">0</span>
+          <span class="unit">บาท</span>
+        </div>
+        <input id="amount-slider" type="range" min="1000" max="50000" step="1000" value="50000"
+               aria-label="วงเงินที่ต้องการ" />
+        <div class="range-bounds"><span>1,000 ฿</span><span id="range-max">50,000 ฿</span></div>
+
+        <div class="calc-step-label"><span class="calc-step-num">3</span> จำนวนงวด</div>
+        <div class="amount-row">
+          <span id="months-value" class="value">0</span>
+          <span class="unit">เดือน</span>
+        </div>
+        <input id="months-slider" type="range" min="3" max="60" step="1" value="60"
+               aria-label="จำนวนงวดที่ต้องการผ่อน" />
+        <div class="range-bounds"><span>3 เดือน</span><span id="months-max">60 เดือน</span></div>
+
+        <div id="calc-result" class="calc-result"></div>
+      </div>
+    </section>
+
+    <!-- ===== คุณสมบัติผู้กู้ ===== -->
+    <section id="about" class="section-wrap">
+      <span class="section-label">✦ ตรวจสอบก่อนสมัคร</span>
+      <div class="accent-bar"></div>
+      <h2 class="section-title">คุณสมบัติผู้กู้</h2>
+      <p class="section-sub">ตรวจสอบว่าคุณมีคุณสมบัติครบก่อนสมัคร</p>
+      <div id="qual-list" class="check-list"></div>
+    </section>
+
+    <!-- ===== เอกสาร ===== -->
+    <section class="section-wrap">
+      <span class="section-label">✦ เอกสาร</span>
+      <div class="accent-bar"></div>
+      <h2 class="section-title">เตรียมเพียง 3 อย่าง</h2>
+      <p class="section-sub">เตรียมเอกสารแค่ 3 อย่างก็สมัครได้ ส่งผ่าน LINE ได้เลย</p>
+      <div id="doc-grid" class="doc-grid"></div>
+    </section>
+
+    <!-- ===== ขั้นตอน ===== -->
+    <section class="section-wrap">
+      <span class="section-label">✦ ขั้นตอน</span>
+      <div class="accent-bar"></div>
+      <h2 class="section-title">สมัครง่าย ใน 5 ขั้นตอน</h2>
+      <p class="section-sub">ไม่ยุ่งยาก ใช้เวลาไม่นาน</p>
+      <div id="step-list" class="step-list"></div>
+    </section>
+
+    <!-- ===== พื้นที่ให้บริการ ===== -->
+    <section class="section-wrap">
+      <span class="section-label">✦ พื้นที่ให้บริการ</span>
+      <div class="accent-bar"></div>
+      <h2 class="section-title">พื้นที่บริการ</h2>
+      <p class="section-sub">ให้บริการเฉพาะผู้ที่มีทะเบียนบ้าน หรือปฏิบัติงานในจังหวัดอุตรดิตถ์เท่านั้น</p>
+      <div class="card province-card">
+        <span class="province-pin">📍</span>
+        <span class="province-name">จังหวัดอุตรดิตถ์</span>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section-wrap cta">
+      <div class="card cta-card">
+        <h3>พร้อมสมัครแล้วหรือยัง?</h3>
+        <p>ติดต่อเราได้เลย ไม่มีค่าใช้จ่ายในการสมัคร</p>
+        <div class="cta-actions">
+          <a class="btn-line" href="https://line.me/ti/p/NenMGpzP2S" target="_blank" rel="noopener">💬 สมัครผ่าน LINE ได้เลย</a>
+          <a class="btn-call" href="tel:0645169542">📞 โทรเลย</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="#home" class="brand">
+        <img src="assets/img/logo.jpg" alt="โลโก้บริษัท" />
+        <span class="brand-name">PICO FINANCE<small>บริษัท ใหญ่เติมสุข จำกัด</small></span>
+      </a>
+      <p class="footer-desc">
+        บริษัท ใหญ่เติมสุข จำกัด ประกอบธุรกิจสินเชื่อรายย่อยระดับจังหวัดภายใต้การกำกับ (พิโกไฟแนนซ์)
+        ได้รับอนุญาตจากกระทรวงการคลัง เพื่อให้บริการสินเชื่อแก่ข้าราชการและพนักงานรัฐวิสาหกิจ
+        ในจังหวัดอุตรดิตถ์ ด้วยความโปร่งใส เป็นธรรม และถูกต้องตามกฎหมาย
+      </p>
+
+      <div class="footer-block">
+        <h5>ติดต่อเรา</h5>
+        <p>📍 119 ม.6 ต.แม่พูล อ.ลับแล จ.อุตรดิตถ์</p>
+        <p>📞 <a href="tel:0645169542">064-516-9542</a></p>
+        <p>💬 LINE: <a href="https://line.me/ti/p/NenMGpzP2S" target="_blank" rel="noopener">pico.utt</a></p>
+      </div>
+
+      <div class="footer-block">
+        <h5>คณะกรรมการ</h5>
+        <div id="footer-directors" class="footer-directors"></div>
+      </div>
+
+      <div class="footer-block">
+        <h5>ใบอนุญาต</h5>
+        <p>เลขที่ 1169/2568 กระทรวงการคลัง</p>
+        <a class="footer-license-link" href="https://www.fpo.go.th/FPOLicense/?d=1_12053556800038253116925684" target="_blank" rel="noopener">ตรวจสอบใบอนุญาต ↗</a>
+      </div>
+
+      <div class="footer-bottom">© 2569 บริษัท ใหญ่เติมสุข จำกัด · สงวนลิขสิทธิ์</div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/calculator.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
