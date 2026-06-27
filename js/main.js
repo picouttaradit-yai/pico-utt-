@@ -98,14 +98,17 @@ function initCalculator() {
   const resultBox = $("#calc-result");
   if (!occWrap || !slider) return;
 
+  // อาชีพที่เปิดให้เลือก (ข้ามตัวที่ตั้ง hidden: true ไว้)
+  const visibleOccs = OCCUPATIONS.filter((o) => !o.hidden);
+
   const state = {
-    occ: OCCUPATIONS[0],
-    amount: maxLoanAmount(OCCUPATIONS[0].id),
-    months: maxLoanTerm(OCCUPATIONS[0].id),
+    occ: visibleOccs[0],
+    amount: maxLoanAmount(visibleOccs[0].id),
+    months: maxLoanTerm(visibleOccs[0].id),
   };
 
   // สร้างปุ่มอาชีพ
-  OCCUPATIONS.forEach((o) => {
+  visibleOccs.forEach((o) => {
     const btn = el("button", "occ-btn");
     btn.dataset.id = o.id;
     btn.innerHTML = `<span class="left">${o.icon} ${o.label}</span>
@@ -198,15 +201,6 @@ function renderNews() {
   });
 }
 
-/* ---------- Footer dynamic bits ---------- */
-function renderFooterDirectors() {
-  const wrap = $("#footer-directors");
-  if (!wrap) return;
-  DIRECTORS.forEach((d) =>
-    wrap.appendChild(el("p", null, `${d.name} — ${d.role}`))
-  );
-}
-
 /* ---------- Boot ---------- */
 document.addEventListener("DOMContentLoaded", () => {
   initNav();
@@ -217,5 +211,4 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSteps();
   initCalculator();
   renderNews();
-  renderFooterDirectors();
 });
