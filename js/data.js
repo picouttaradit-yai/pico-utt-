@@ -98,7 +98,8 @@ const OCCUPATIONS = [
   { id: "gov", label: "ข้าราชการ", icon: "🏛️", color: "#e0b84a" },
   { id: "local", label: "ข้าราชการท้องถิ่น", icon: "🏘️", color: "#4a9eda", termCap: 24 },
   { id: "state", label: "รัฐวิสาหกิจ", icon: "🏢", color: "#a78bfa", termCap: 24 },
-  { id: "general", label: "อาชีพทั่วไป", icon: "👤", color: "#3ecf6e", termCap: 12 },
+  // อาชีพทั่วไป: ซ่อนชั่วคราว ยังไม่เปิดให้เลือก — เปิดใช้ใหม่โดยลบ hidden: true ออก
+  { id: "general", label: "อาชีพทั่วไป", icon: "👤", color: "#3ecf6e", termCap: 12, hidden: true },
 ];
 
 /* ข่าวสาร — ว่างไว้ ให้เติมเองภายหลังใน news.html
